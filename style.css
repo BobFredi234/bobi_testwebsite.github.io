@@ -1,0 +1,90 @@
+:root {
+    --primary-color: #FA1E4E;
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+    --dark-color1: #0F0D14;
+    --dark-color2: #150721;
+    --violet-color1: #100E16;
+    --dark-color3: #09080D;
+    --minHeight-100: 100vh;
+    --max-width: 100%;
+    --width-50: 50%;
+    --default-display : flex;
+    --time-3: 0.3s;
+    --time-5: 0.5s;
+    --time-10: 1s;
+    --no-margin : 0;
+    --no-padding: 0;
+    --default-box-sizing: border-box;
+    --w-5: 500px;
+    --w-10: 100px;
+    --w-20: 200px;
+    --w-30: 300px;
+    --w-40: 400px;
+    --h-10: 100px;
+    --h-20: 200px;
+    --h-25: 250px;
+    --h-40: 400px;
+    --pd-1: 10px;
+    --pd-2: 20px;
+    --pd-5: 5px;
+    --yes-wrap: wrap;
+    --default-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+.animate-box {
+    opacity: 0;
+}
+.animated-fast {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+* {
+    margin: var(--no-margin);
+    padding: var(--no-padding);
+    box-sizing: var(--default-box-sizing);
+    font-family: var(--default-font);
+}
+
+body {
+    width: var(--max-width);
+    min-height: var(--minHeight-100);
+    display: var(--default-display);
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    color: var(--white-color);
+    background-color: var(--dark-color1);
+    position: relative;
+}
+.content {
+    min-width: 50%;
+    padding: var(--pd-1);
+    background: linear-gradient(120deg, var(--dark-color2) 10%, var(--dark-color3) 70%, var(--primary-color) );
+    border-radius: 20px;
+    height: var(--w-5);
+    margin: var(--pd-1);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform: translate3d(0, 40px, 0);
+        transform: translate3d(0, 40px, 0);
+    }
+    
+    100% {
+        visibility: visible;
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
